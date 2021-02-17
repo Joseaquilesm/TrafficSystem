@@ -18,6 +18,6 @@ public class CameraTime : MonoBehaviour
 
     public void changeTime(float time)
     {
-        Time.timeScale = time;
+     //   Time.timeScale = time;
     }
 }

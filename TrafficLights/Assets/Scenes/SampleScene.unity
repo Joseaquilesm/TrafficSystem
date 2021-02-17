@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 52360356}
   - component: {fileID: 52360358}
   - component: {fileID: 52360357}
+  - component: {fileID: 52360359}
   m_Layer: 0
   m_Name: trafficLights_red_West
   m_TagString: Untagged
@@ -147,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52360355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.84, y: -0.32, z: 0}
+  m_LocalPosition: {x: -1.28, y: -0.3, z: 0}
   m_LocalScale: {x: 4.5641894, y: 6.235524, z: 1}
   m_Children: []
   m_Father: {fileID: 734465568}
@@ -165,6 +166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9de1a4f947b8614ea73159740ff72c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  green: {fileID: 1896267161723516109, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  yellow: {fileID: 5447709496224497064, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  red: {fileID: 7155298011648707679, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  isRed: 0
+  num: 0
+  boxcollider: {fileID: 0}
+  safety: {fileID: 0}
 --- !u!212 &52360358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,6 +224,124 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &52360359
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52360355}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.13, y: 0.22}
+    newSize: {x: 0.13, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.22}
+  m_EdgeRadius: 0
+--- !u!1 &139923776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139923777}
+  - component: {fileID: 139923779}
+  - component: {fileID: 139923778}
+  - component: {fileID: 139923780}
+  m_Layer: 0
+  m_Name: safety
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139923777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139923776}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.54, y: 0.43, z: -38.426914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 734465568}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &139923778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139923776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93facfb9911ccb34b92cbb3e176b281f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &139923779
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139923776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 3.5}
+  m_EdgeRadius: 0
+--- !u!50 &139923780
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139923776}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,14 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686718ab8078e384b907ce1439708509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 0}
-  respawnTime: 1
---- !u!4 &530813761 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 5593569893078834200}
-  m_PrefabAsset: {fileID: 0}
+  car: {fileID: 0}
 --- !u!1 &734465566
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,13 +492,14 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 139923777}
   - {fileID: 1105610600}
   - {fileID: 1534964816}
-  - {fileID: 530813761}
   - {fileID: 52360356}
   - {fileID: 1015419073}
   - {fileID: 830059542}
   - {fileID: 2069129331}
+  - {fileID: 1610403274}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -393,6 +513,8 @@ GameObject:
   m_Component:
   - component: {fileID: 830059542}
   - component: {fileID: 830059543}
+  - component: {fileID: 830059545}
+  - component: {fileID: 830059544}
   m_Layer: 0
   m_Name: trafficLights_red_North
   m_TagString: Untagged
@@ -408,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830059541}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -0.142, y: 1.69, z: 0}
+  m_LocalPosition: {x: -0.14, y: 2.25, z: 0}
   m_LocalScale: {x: 4.564189, y: 6.235524, z: 1}
   m_Children: []
   m_Father: {fileID: 734465568}
@@ -465,6 +587,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &830059544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830059541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0611faadd5f2cf443a016572d9b2ed8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  green: {fileID: 1896267161723516109, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  yellow: {fileID: 5447709496224497064, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  red: {fileID: 7155298011648707679, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  isRed: 0
+  num: 0
+  boxcollider: {fileID: 0}
+--- !u!61 &830059545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830059541}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.13, y: 0.22}
+    newSize: {x: 0.13, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &1015419072
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +641,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1015419073}
   - component: {fileID: 1015419074}
+  - component: {fileID: 1015419076}
+  - component: {fileID: 1015419075}
   m_Layer: 0
   m_Name: trafficLights_red_South
   m_TagString: Untagged
@@ -490,7 +658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015419072}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.311, y: -0.761, z: 0}
+  m_LocalPosition: {x: 1.265, y: -1.46, z: 0}
   m_LocalScale: {x: 4.5641894, y: 6.235524, z: 1}
   m_Children: []
   m_Father: {fileID: 734465568}
@@ -547,6 +715,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1015419075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015419072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0611faadd5f2cf443a016572d9b2ed8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  green: {fileID: 1896267161723516109, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  yellow: {fileID: 5447709496224497064, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  red: {fileID: 7155298011648707679, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  isRed: 0
+  num: 0
+  boxcollider: {fileID: 0}
+--- !u!61 &1015419076
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015419072}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.13, y: 0.22}
+    newSize: {x: 0.13, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.22}
+  m_EdgeRadius: 0
 --- !u!1 &1105610599
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 734465568}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1105610601
 TilemapRenderer:
@@ -3527,11 +3739,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534964815}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.04, z: 0}
+  m_LocalPosition: {x: 0.08, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 734465568}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1534964817
 TilemapRenderer:
@@ -4193,6 +4405,53 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1610403273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610403274}
+  - component: {fileID: 1610403275}
+  m_Layer: 0
+  m_Name: CarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1610403274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610403273}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.13, y: 1.07, z: -1.976031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 734465568}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1610403275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610403273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0535785b8c4384c8c4c3d003a5f6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  car: {fileID: 5593569893374693208, guid: 997ffc497fafe254699eb3ede61cc7ba, type: 3}
+  spawnRate: 2
+  greenSprite: {fileID: 0}
+  redSprite: {fileID: 0}
 --- !u!1 &2069129330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,6 +4462,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2069129331}
   - component: {fileID: 2069129332}
+  - component: {fileID: 2069129333}
+  - component: {fileID: 2069129334}
   m_Layer: 0
   m_Name: trafficLights_red_East
   m_TagString: Untagged
@@ -4218,7 +4479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069129330}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 1.748, y: 1.25, z: 0}
+  m_LocalPosition: {x: 2.48, y: 1.13, z: 0}
   m_LocalScale: {x: 4.564189, y: 6.235524, z: 1}
   m_Children: []
   m_Father: {fileID: 734465568}
@@ -4275,72 +4536,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &5593569893078834200
-PrefabInstance:
+--- !u!114 &2069129333
+MonoBehaviour:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069129330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9de1a4f947b8614ea73159740ff72c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  green: {fileID: 1896267161723516109, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  yellow: {fileID: 5447709496224497064, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  red: {fileID: 7155298011648707679, guid: 162a8a4325481f349a39edcd58c8f174, type: 3}
+  isRed: 0
+  num: 0
+  boxcollider: {fileID: 0}
+  safety: {fileID: 0}
+--- !u!61 &2069129334
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069129330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.13, y: 0.22}
+    newSize: {x: 0.13, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 734465568}
-    m_Modifications:
-    - target: {fileID: 5593569893374693208, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_Name
-      value: RedCar
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5593569893374693209, guid: 997ffc497fafe254699eb3ede61cc7ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 997ffc497fafe254699eb3ede61cc7ba, type: 3}
+  m_Size: {x: 0.13, y: 0.22}
+  m_EdgeRadius: 0
